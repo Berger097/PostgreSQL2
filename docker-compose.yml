@@ -6,10 +6,12 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: 12345
+      POSTGRES_PASSWORD: 2345
+      POSTGRES_USER: app
+      POSTGRES_DB: db
 
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8080:8080
+      - 9999:3306
